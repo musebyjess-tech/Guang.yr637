@@ -8,7 +8,6 @@ import { Navigation }       from "./components/Navigation";
 import { HeroSection }      from "./components/HeroSection";
 import { OrbitEngine }      from "./components/OrbitEngine";
 import { SignalFragments }  from "./components/SignalFragments";
-import { SignalReceiver }   from "./components/SignalReceiver";
 import { FrequencyLab }     from "./components/FrequencyLab";
 import { CelestialAtlas }   from "./components/CelestialAtlas";
 import { AfterglowArchive } from "./components/AfterglowArchive";
@@ -54,9 +53,6 @@ export default function App() {
         <SignalFragments />
 
         <Divider />
-        <SignalReceiver />
-
-        <Divider />
         <FrequencyLab />
 
         <Divider />
@@ -72,11 +68,11 @@ export default function App() {
         >
           {/* Footer wordmark */}
           <div className="flex items-baseline justify-center gap-0 mb-5">
-            <span style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 300, fontSize: 32, letterSpacing: "0.08em", color: "rgba(234,234,242,0.1)" }}>Guang.</span>
+            <span style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 300, fontSize: 32, letterSpacing: "0.14em", color: "rgba(234,234,242,0.1)" }}>Guang</span>
             <span style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 300, fontSize: 34, background: "linear-gradient(135deg,#6E6AF0,#F6B7D2,#FFD36B)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", opacity: 0.4 }}>∞</span>
-            <span style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 300, fontSize: 32, letterSpacing: "0.08em", color: "rgba(234,234,242,0.1)" }}>Year</span>
+            <span style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 300, fontSize: 32, letterSpacing: "0.14em", color: "rgba(234,234,242,0.1)" }}>year</span>
           </div>
-          <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 12, fontWeight: 300, color: "rgba(180,178,240,0.25)", letterSpacing: "0.05em", lineHeight: 1.8 }}>
+          <div style={{ fontFamily: "new roman", fontSize: 12, fontWeight: 300, color: "rgba(180,178,240,0.25)", letterSpacing: "0.05em", lineHeight: 1.8 }}>
             A living celestial archive. All transmissions received.
           </div>
           <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 8, color: "rgba(234,234,242,0.1)", letterSpacing: "0.25em", marginTop: 20 }}>

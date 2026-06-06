@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import kittyImg from "../../imports/11463fed4970251140bdbedfc5b6d018.png";
+import kittyImg from "../../imports/kitty astronaut.png";
 
 // ── Boot greeting — shown 3s after Kitty finishes its entrance ───────────────
 const BOOT_MESSAGE = "Hi 小Alex ♡";
@@ -29,7 +29,7 @@ const LATE_NIGHT_MESSAGES = [
 function MessageBubble({ message }: { message: string }) {
   const [phase, setPhase] = useState<"receiving" | "typing">("receiving");
   const [typed, setTyped] = useState("");
-  const tickRef           = useRef<ReturnType<typeof setTimeout>>();
+  const tickRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   useEffect(() => {
     setPhase("receiving");
@@ -177,8 +177,8 @@ export function KittyAstronaut() {
   const [isHovered,    setIsHovered]    = useState(false);
   const [showBubble,   setShowBubble]   = useState(false);
   const [currentMsg,   setCurrentMsg]   = useState<string | null>(null);
-  const hideTimer = useRef<ReturnType<typeof setTimeout>>();
-  const nextTimer = useRef<ReturnType<typeof setTimeout>>();
+  const hideTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const nextTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   const pickMessage = () => {
     const hour = new Date().getHours();

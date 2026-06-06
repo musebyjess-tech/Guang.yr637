@@ -286,15 +286,16 @@ export function HeroSection() {
       </motion.p>
 
       {/* ── OrbitalMark — space always reserved; materialises after title locks ─ */}
-      <motion.div
-        animate={
-          markVisible
-            ? { opacity: 1, filter: "blur(0px)", scale: 1, y: 0 }
-            : { opacity: 0, filter: "blur(28px)", scale: 0.94, y: 12 }
-        }
-        transition={{ duration: 3.2, ease: "easeOut" }}
-        style={{ marginBottom: 24 }}
-      >
+<motion.div
+  initial={{ opacity: 0, filter: "blur(28px)", scale: 0.94, y: 30 }}
+  animate={
+    markVisible
+      ? { opacity: 1, filter: "blur(0px)", scale: 1, y: 0 }
+      : { opacity: 0, filter: "blur(28px)", scale: 0.94, y: 30 }
+  }
+  transition={{ duration: 3.2, ease: "easeOut" }}
+  style={{ marginBottom: 24, minHeight: mark.h }}  
+>
         <motion.div
           animate={markVisible ? {
             filter: [
@@ -310,7 +311,13 @@ export function HeroSection() {
       </motion.div>
 
       {/* ── Title — always in position; characters scramble into GUANG.Year ──── */}
-      <div className="flex items-baseline justify-center" style={{ gap: 0, lineHeight: 1 }}>
+      <motion.div
+         className="flex items-baseline justify-center"
+         initial={{ opacity: 0, y: 40 }}
+         animate={{ opacity: 1, y: 0 }}
+         transition={{ duration: 1.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+         style={{ gap: 0, lineHeight: 1 }}
+      >
         <span style={{
           ...titleBase,
           letterSpacing: titleDone ? "0.14em" : "0.18em",
@@ -328,7 +335,7 @@ export function HeroSection() {
         }}>
           {yearStr}
         </span>
-      </div>
+      </motion.div>
 
       {/* ── Subtitle — Cormorant Garamond italic, after title resolves ─────────── */}
       <motion.p
@@ -339,7 +346,7 @@ export function HeroSection() {
           fontFamily: "'Cormorant Garamond', serif",
           fontWeight: 300, fontStyle: "italic",
           fontSize: "clamp(12px, 1.4vw, 15px)",
-          letterSpacing: "0.46em", paddingLeft: "0.46em",
+          letterSpacing: "0.25em", paddingLeft: "0.46em",
           color: "rgba(246,183,210,0.65)",
           marginTop: 20,
         }}
@@ -348,16 +355,14 @@ export function HeroSection() {
       </motion.p>
 
       {/* ── Archive panel — three signal nodes, emerges last ────────────────── */}
-      {archiveVisible && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2.2, ease: "easeOut" }}
-          style={{ width: "100%", display: "flex", justifyContent: "center" }}
-        >
-          <ArchivePanel />
-        </motion.div>
-      )}
+      <motion.div
+         initial={{ opacity: 0, y: 20 }}
+         animate={archiveVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 2.2, ease: "easeOut" }}
+        style={{ width: "100%", display: "flex", justifyContent: "center" }}
+      >
+       <ArchivePanel />
+      </motion.div>
 
       {/* ── Scroll indicator ────────────────────────────────────────────────── */}
       <motion.div

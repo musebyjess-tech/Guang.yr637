@@ -4,8 +4,7 @@ import { motion } from "motion/react";
 const SECTIONS = [
   { id: "hero",      label: "Signal"    },
   { id: "orbit",     label: "Orbit"     },
-  { id: "fragments", label: "Fragments" },
-  { id: "receiver",  label: "Receiver"  },
+  { id: "fragments", label: "Codex" },
   { id: "frequency", label: "Lab"       },
   { id: "atlas",     label: "Atlas"     },
   { id: "afterglow", label: "Archive"   },
@@ -40,16 +39,16 @@ export function Navigation() {
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-8 py-5"
+      className="absolute top-0 left-0 right-0 z-40 flex items-center justify-between px-8 py-5"
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1.2, delay: 3.2, ease: "easeOut" }}
+      transition={{ duration: 1.2, delay: 4.2, ease: "easeOut" }}
       style={{
-        background:     scrolled ? "rgba(11,16,32,0.72)" : "transparent",
-        backdropFilter: scrolled ? "blur(18px)"          : "none",
-        borderBottom:   scrolled ? "1px solid rgba(110,106,240,0.08)" : "none",
+              background:scrolled ? "rgba(11,16,32,0.72)" : "transparent",
+        backdropFilter:scrolled ? "blur(18px)"          : "none",
+        borderBottom:scrolled ? "1px solid rgba(110,106,240,0.08)" : "none",
         transition: "background 0.6s ease, backdrop-filter 0.6s ease, border 0.6s ease",
-      }}
+}}
     >
       {/* Archive identifier */}
       <button
