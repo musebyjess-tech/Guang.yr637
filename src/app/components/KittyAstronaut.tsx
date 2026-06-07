@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import kittyImg from "../../imports/kitty astronaut.png";
+import kittyImg from "./../imports/kitty-astronaut.png";
 
 // ── Boot greeting — shown 3s after Kitty finishes its entrance ───────────────
 const BOOT_MESSAGE = "Hi 小Alex ♡";
