@@ -69,7 +69,7 @@ export function TelescopeImage({ onClick, launching }: TelescopeImageProps) {
           whileTap={{ scale: 0.95 }}
         >
           <img
-            src="/天文望远镜.png"
+            src="/telescope.png"
             alt="Cosmic telescope"
             style={{
               maxWidth: "60%",
