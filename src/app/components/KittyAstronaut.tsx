@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import kittyImg from "./../imports/kitty-astronaut.png";
+<img
+  src="/kitty-astronaut.png"
+  alt="Kitty"
+/>
 
 // ── Boot greeting — shown 3s after Kitty finishes its entrance ───────────────
 const BOOT_MESSAGE = "Hi 小Alex ♡";
@@ -124,7 +127,7 @@ function KittyHelmet({ isHovered }: { isHovered: boolean }) {
       style={{ display: "block", lineHeight: 0 }}
     >
       <img
-        src={kittyImg}
+        src="/kitty-astronaut.png"
         alt="Hello Kitty Astronaut"
         style={{ width: 50, height: 50, objectFit: "contain", display: "block" }}
       />
