@@ -13,6 +13,7 @@ import { CelestialAtlas }   from "./components/CelestialAtlas";
 import { AfterglowArchive } from "./components/AfterglowArchive";
 import { KittyAstronaut }  from "./components/KittyAstronaut";
 import { RoamingUniverse } from "./components/RoamingUniverse";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   const [showRoaming, setShowRoaming] = useState(false);
@@ -79,6 +80,7 @@ export default function App() {
             PHOSPHORUS A.H · NODE ACTIVE · ∞
           </div>
         </footer>
+        <Analytics />
       </div>
     </div>
   );
