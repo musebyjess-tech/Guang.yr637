@@ -65,27 +65,27 @@ Rules:
 // ── Message content ───────────────────────────────────────────────────────────
 const REGULAR_MESSAGES = [
   "祝你保持爱的能力也无限被爱",
-  "这里是20块草莓芝士蛋糕：🍰✨\n（我偷吃了三块heehee）",
+  "这里是20块草莓芝士蛋糕：🍰✨\n（某·c偷吃了三块）",
   "送你的礼物是加倍的幸福、勇气和金光闪闪的一切",
   "Alex只要想做就一定会做到！",
   "우린 할 수 있어요\n서로의 두 손 꼭 잡으면 되는 걸\n못할 게 없어요",
   "以后的幸福回忆只会越来越多",
   "全世界最胆小的人勇敢地迈出了第一步",
-  "我有时候觉得你像一只大狗狗，真的。",
+  "Embrace it.",
   "我地幾時再相見？",
-  "-12h的时差最讨厌了 TT",
+  "-12h的时差最讨厌了",
   "Juno",
   "Now that I found you",
   "'Say my name and everything just stops'",
   "坚定勇敢地面对不可预知的明天吧",
-  "Can you make a promise?",
+  "Reach whatever is calling you.",
   "今年许了什么愿望！",
   "逛邊市區所有路燈",
   "独属于你的生命意义",
   "你的自信，天赋，使命，和你的勇敢",
   "相信自己 坚定地向前吧！",
-  "约定：幸福健康",
-  "请努力睡觉!\nEverything is alright in dream tunes",
+  "幸福健康的约定",
+  "好好休息哟 \nEverything is alright in dream tunes",
 ];
 const SPECIAL_MESSAGE = "23岁 光年抵达☆.。.:・\nAlex生日快乐！\nTHIS IS YOUR TIME.";
 
